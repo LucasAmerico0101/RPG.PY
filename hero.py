@@ -8,6 +8,7 @@ class Hero:
         self.vida = 100
         self.stamina = 100
         self.attack = 10
+        self.anoes=100
 
     def mostrar_detalhes(self):
         print(f"Nome: {self.nome}")
@@ -30,3 +31,19 @@ class Hero:
         print("Você levou 10 pontos de dano")
         self.vida -= 10
         print(f"Você perdeu 10 pontos de vida, agora seu saldo de pontos de vida é: {self.vida}")
+    def apostar(self):
+        print("Você apostou 10 anoes da sua coleção")
+        self.anoes - 10
+        print(f"Você perdeu 10 anoes, agora seu saldo de anoes é:")
+        self.anoes
+    def ganhar_aposta(self):
+        print("PARABENS VOCE GANHOU A RINHA DE ANOES!!!!!")
+        print("COMO RECOMPENSA VOCE GANHOU 10 ANOES!!!!")
+        self.anoes + 10
+        print("AGORA SEU SALDO DE ANOES É DE: ",self.anoes)
+    def perder_aposta(self):
+        print("VOCE PERDEU A RINHA DE ANOES!!!!!")
+        print("COMO RECOMPENSA VOCE PERDEU 10 ANOES!!!!")
+        self.anoes - 10
+        print("AGORA SEU SALDO DE ANOES É DE: ",self.anoes)
+        

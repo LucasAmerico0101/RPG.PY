@@ -8,11 +8,12 @@ def construir_heroi():
     classe = input("Digite a classe que você gostaria de ser [Cavaleiro, Viking, Mago, Samurai, Padre]: ")
     porte = input("Qual porte deseja ter [Magro, Gordo, Musculoso]: ")
     return Hero(nome, raca, cabelo, classe, porte)
-
+def rinha_anoes():
+    chance=random.randint(1,10000)
+    return chance <= 10000
 def inimigo_aleatorio():
     chance = random.randint(1, 100)
     return chance <= 30
-
 def dano():
     probabilidade = random.randint(1, 10)
     return probabilidade <= 10
@@ -39,6 +40,22 @@ def jogo():
                             heroi.sofrer_dano()
                         else:
                             print("Você derrotou o inimigo!")
+                            if rinha_anoes():
+                                print("*****Voce entrou em uma taverna onde esta tendo rinha ilegal de anoes *****")
+                            aposta= input("Deseja apostar?  [S/N]")
+                            if aposta == "S":
+                                Hero.apostar
+                                vitoria = random.randint(1,100)
+                                if vitoria >= 100:
+                                    Hero.perder_aposta
+                                elif vitoria <= 100:
+                                    Hero.ganhar_aposta
+                            elif aposta == "N":
+                                print("Voce nao apostou nada")
+                                print("Voce continuo sua jornada lindamente caminhando pelos lindos vales")
+                            else:
+                                print("SIM OU NAO PORRA, QUER APOSTAR OU NAO?!!!!!!!!!")
+
                     elif lutar == 'N':
                         print("Você fugiu!")
                     else:
